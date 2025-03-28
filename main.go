@@ -30,7 +30,7 @@ type Game struct {
 func (g *Game) Update() error {
 	g.player.Update(g.world)
 
-	// vключение/vыключение режима отладки
+	// ф3
 	f3Pressed := ebiten.IsKeyPressed(ebiten.KeyF3)
 	if f3Pressed && !g.prevF3 {
 		g.debugMode = !g.debugMode
@@ -41,10 +41,10 @@ func (g *Game) Update() error {
 }
 
 func (g *Game) Draw(screen *ebiten.Image) {
-	// fon nebo
+	// небо
 	screen.Fill(color.RGBA{135, 206, 235, 255})
 
-	// otrisovka
+	// отрисовка
 	g.world.Draw(screen)
 	g.player.Draw(screen)
 
